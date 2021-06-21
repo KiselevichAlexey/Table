@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table</title>
-</head>
-<body>
-
-</body>
+<html lang="ru">
+ <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href='./style.css'>
+	<script type="module" src="app.js" defer></script>
+	<title>Table</title>
+ </head>
+ <body>
+	<main>
+		<table class="table">
+			<thead>
+				<th class="number">
+					<div>№<img src="sort.png" /></div>
+				</th>
+				<th>
+					<div>ФИО<img src="sort.png" /></div>
+				</th>
+				<th>
+					<div>Дата рождения<img src="sort.png" /></div>
+				</th>
+				<th>
+					<div>Оклад<img src="sort.png" /></div>
+				</th>
+			</thead>
+			<tbody>
+			</tbody>
+			<tfoot>
+				<td class="number">Итого :</td>
+				<td class="total-workers"></td>
+				<td class="total-birthday"></td>
+				<td class="total-salary"></td>
+			</tfoot>
+		</table>
+		<form class="add-worker-form">
+			<label for="full-name">Фамилия Имя Отчество
+				<input 
+				 required
+				 id="full-name"
+				 name="full-name"
+				 type="text" 
+				 pattern="[А-Я][а-я]+?\s[А-Я][а-я]+?\s[А-Я][а-я]+"
+				 placeholder="Калинин Владимир Александрович ...">
+			</label>
+			<label for="date-of-birth">Дата рождения
+				<input 
+				 required 
+				 id="date-of-birth" 
+				 name="date-of-birth" 
+				 type="date"
+				 min="1940-01-01" 
+				 max="2006-01-01">
+			</label>
+			<label for="salary">Оклад
+				<input 
+				 required 
+				 id="salary" 
+				 name="salary" 
+				 type="number" 
+				 min="1"
+				 placeholder="50 000...">
+			</label>
+			<button type="submit" class='add-worker-btn'>Добавить работника</button>
+		</form>
+	</main>
+ </body>
 </html>

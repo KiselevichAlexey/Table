@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.table {
+    max-width: 800px;
+    width: 100%;
+    margin: 10px auto;
+    background-color: #fff;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.table tr{
+padding: 5px;
+}
+
+tbody tr:nth-child(even) {
+    background: #f2f0f6;
+}
+th {
+   background-color:  #081f2c;
+   color: #fff;
+   height: 50px;
+}
+
+.sort{
+    transform: scale(1,-1);
+}
+th div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
+}
+th img{
+    padding: 1px;
+    width: 20px;
+    height: 20px; 
+
+}
+th img:hover {
+    background-color: rgba(211, 211, 211, 0.616);
+    cursor: pointer;
+}
+
+  
+th , td{
+    border-bottom: 1px solid #cecfd5;
+    border:1px solid #cecfd5 ;
+    padding: 5px;
+}
+
+tbody tr td:first-child{
+    width: 80px;
+    cursor: move;
+}
+
+.add-worker-btn{
+    background: #081f2c;
+    color: #FFF;
+    height: 40px;
+    cursor: pointer;
+}
+.add-worker-form{
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    justify-content:space-between;
+    align-items: flex-end;
+    max-width: 800px;
+    margin: auto;
+}
+@media screen and (min-width:610px) {
+    .add-worker-form{
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+  @media screen and (max-width:609px) {
+    .add-worker-form{
+      grid-template-columns: repeat(auto-fit,250px) ;
+      justify-content: center;
+    }
+  }
+label{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 40px;
+}
+tr td.delete{
+  border: none;
+  display: none;
+  background-color: #fff;
+  position: absolute;
+}
+tr:hover .delete{
+    display: table-cell;
+}
+td.delete img{
+    width: 25px;
+    cursor: pointer;
+}
